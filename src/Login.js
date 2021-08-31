@@ -49,7 +49,9 @@ const Form = () => {
         <div className="wrapper fadeInDown">
           <div id="formContent">
             <div class="login ">
-              <label>Username</label>
+              <label>
+                <b>Email id</b>
+              </label>
               <br></br>
               <input
                 type="text"
@@ -61,7 +63,9 @@ const Form = () => {
                 onChange={handleInputChange}
               />
               <br></br>
-              <label>Password</label>
+              <label>
+                <b>Password</b>
+              </label>
               <br></br>
               <input
                 type="password"

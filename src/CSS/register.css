@@ -3,12 +3,17 @@ body {
   padding: 0;
   /* align : center; */
   font-family: "clibri";
+
+  background-image: url("..//Assets/oxygen\ Getty\ Images.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 .container {
-  width: 400px;
+  width: 382px;
   overflow: hidden;
-  margin: 40px;
-  padding: 40px;
+  margin: 20px;
+  padding: 20px;
   background: #080808;
   border-radius: 15px;
 }

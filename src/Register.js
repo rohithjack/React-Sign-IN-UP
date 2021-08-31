@@ -41,10 +41,13 @@ const Register = () => {
   };
   return (
     <div className="container">
-      <h3 className="form">Register as new User</h3>
+      <h3 className="form">
+        {" "}
+        <b>Register as new User</b>{" "}
+      </h3>
       <form className="" action="" onSubmit={onSubmitForm} method="POST">
         <div>
-          <label>UserName:</label>
+          <label>UserName</label>
         </div>
         <input
           type=""
@@ -52,56 +55,99 @@ const Register = () => {
           name="user_name"
           onChange={handleInputChange}
         />
-
+        <br></br>
         <div>
-          <label for="Password">Password:</label>
+          <label for="Password">Password</label>
           <br></br>
 
           <input
             type="Password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
             //class="form-group col-sm-5 "
-            placeholder="Enter password"
+            placeholder="Enter password"npm 
             name="user_password"
             onChange={handleInputChange}
           />
+          <p>
+            # Password Must contain at least one number and one uppercase and
+            lowercase letter, and at least 8 or more characters required.
+          </p>
         </div>
-
+        <br></br>
         <div>
-          <label for="Age">Age:</label>
+          <label for="Age">Age</label>
         </div>
         <input
           type="Age"
           placeholder="Enter Age"
           name="user_age"
           onChange={handleInputChange}
-        />
-
+        />{" "}
+        <br></br>
+        {/* 
         <div>
-          <label for="Gender">Gender:</label>
+          <label for="Gender">Gender</label>
           <br></br>
 
           <input
             type="Gender"
-            //class="form-group col-sm-5 "
+            class="form-group col-sm-5 "
             placeholder="Enter Gender"
             name="user_gender"
             onChange={handleInputChange}
           />
         </div>
-
+        */}
+        <br></br>
         <div>
-          <label for="Email">Email:</label>
+          <label for="Email">Email</label>
         </div>
         <input
           type="Email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2gi,}$"
           //class="form-group col-sm-5 "
           placeholder="Enter Email"
           name="user_email"
           onChange={handleInputChange}
         />
-
+        <br></br>
+        <br></br>
         <div>
-          <label for="dod">DateOfBirth:</label>
+          <label for="Gender">Gender</label>
+          <br></br>
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="male"
+            name="user_gender"
+            onChange={handleInputChange}
+          />
+          <label for="male">Male</label>
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            name="user_gender"
+            onChange={handleInputChange}
+          />
+
+          <label for="female">Female</label>
+          <input
+            type="radio"
+            id="other"
+            name="gender"
+            value="other"
+            name="user_gender"
+            onChange={handleInputChange}
+          />
+
+          <label for="other">Other</label>
+        </div>
+        <br></br>
+        <div>
+          <label for="dod">DateOfBirth</label>
         </div>
         <input
           type="date"
@@ -110,9 +156,9 @@ const Register = () => {
           name="user_dob"
           onChange={handleInputChange}
         />
-
+        <br></br>
         <div>
-          <label for="City">City:</label>
+          <label for="City">City</label>
         </div>
         <input
           type="city"
@@ -121,15 +167,15 @@ const Register = () => {
           name="user_city"
           onChange={handleInputChange}
         />
-
+        <br></br>
         <div>
-          <label for="Mobileno">MobileNo:</label>
+          <label for="Mobileno">MobileNo</label>
         </div>
-
         <input
-          type="city"
+          type="tel"
           // class="form-group col-sm-5 "
           placeholder="Enter MobileNo"
+          pattern="[0-9]{10}"
           name="user_mobileno"
           onChange={handleInputChange}
         />
@@ -141,13 +187,15 @@ const Register = () => {
             Submit
           </button>
           <br></br>
-
-          <NavLink class="nav-link" to="/login">
-            <button className="btn btn-danger"> Sign in</button>
-            <h3>For Existing User</h3>
-          </NavLink>
         </div>
       </form>
+      <div>
+        <NavLink class="" to="/login">
+          <button className="btn btn-danger">Sign in</button>
+          <h3>For Existing User</h3>
+        </NavLink>
+      </div>
+
       <Route path="/login" component={Login}></Route>
     </div>
   );

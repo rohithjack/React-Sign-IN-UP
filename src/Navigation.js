@@ -1,10 +1,11 @@
 import React from "react";
 import { NavLink, Route } from "react-router-dom";
-import DisplayImage from "./DisplayImage";
-import ImageTest from "./ImageTest";
-import DeveloperPage from "./Developerpage";
+// import DisplayImage from "./DisplayImage";
+// import ImageTest from "./ImageTest";
+// import DeveloperPage from "./Developerpage";
 import Login from "./Login";
 import Register from "./Register";
+import "./CSS/navigation.css";
 
 class Navigation extends React.Component {
   render() {
@@ -37,12 +38,12 @@ class Navigation extends React.Component {
 
             <li className="nav-item">
               <NavLink className="nav-link" to="/Login">
-                Login
+                <b>Login</b>
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/Register">
-                Register
+                <b>Register</b>
               </NavLink>
             </li>
             {/* <li className="nav-item">
@@ -71,10 +72,11 @@ class Navigation extends React.Component {
               </NavLink>
             </li> */}
           </ul>
-        </nav>
+        </nav>{" "}
+        {/*   
         <Route path="/ImageUpload" component={ImageTest}></Route>
         <Route path="/DisplayData" component={DisplayImage}></Route>
-        <Route path="/DeveloperPage" component={DeveloperPage}></Route>
+        <Route path="/DeveloperPage" component={DeveloperPage}></Route>     */}
         <Route path="/Login" component={Login}></Route>
         <Route path="/Register" component={Register}></Route>
       </div>
