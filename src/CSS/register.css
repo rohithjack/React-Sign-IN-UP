@@ -1,14 +1,18 @@
 body {
-  margin: 0;
-  padding: 0;
-  /* align : center; */
+  margin: auto;
+  padding: auto;
+  text-align: center;
+  display: flex;
   font-family: "clibri";
 
   background-image: url("..//Assets/oxygen\ Getty\ Images.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+  width: auto;
+  /* align-items: center; */
 }
+
 .container {
   width: 382px;
   overflow: hidden;
@@ -17,14 +21,17 @@ body {
   background: #080808;
   border-radius: 15px;
 }
+
 form {
   color: #080808;
 }
+
 h3 {
   text-align: left;
   color: rgb(255, 68, 0);
   font-size: large;
 }
+
 label {
   color: orangered;
   font-size: 17px;
@@ -33,22 +40,25 @@ label {
 p {
   color: orangered;
 }
+
 #email {
-  width: 300px;
+  width: 400px;
   height: 30px;
   border: none;
   border-radius: 3px;
   padding-left: 8px;
 }
+
 #phone {
-  width: 300px;
+  width: 400;
   height: 30px;
   border: none;
   border-radius: 3px;
   padding-left: 8px;
 }
+
 #Pass {
-  width: 300px;
+  width: 400px;
   height: 30px;
   border: none;
   border-radius: 3px;
@@ -68,20 +78,27 @@ p {
   width: 300px;
   height: 30px;
   border: none;
-  border-radius: 6px;
+  border-radius: 16px;
   padding-left: 16px;
 }
+
 span {
   color: orangered;
   font-size: 17px;
 }
+
 a {
   float: right;
   /* background-color: rgb(212, 16, 16); */
   color: orangered;
 }
+
 a1 {
   float: Left;
   /* background-color: rgb(212, 16, 16); */
   color: orangered;
+}
+
+.signinclass {
+  align: center;
 }

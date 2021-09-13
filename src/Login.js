@@ -45,69 +45,71 @@ const Form = () => {
 
   return (
     <div>
-      <form action="" onSubmit={onSubmitForm}>
-        <div className="wrapper fadeInDown">
-          <div id="formContent">
-            <div class="login ">
-              <label>
-                <b>Email id</b>
-              </label>
-              <br></br>
-              <input
-                type="text"
-                id="login12"
-                //className="fadeIn second"
-                name="user_email"
-                placeholder="UserId or EmailId"
-                noValidate
-                onChange={handleInputChange}
-              />
-              <br></br>
-              <label>
-                <b>Password</b>
-              </label>
-              <br></br>
-              <input
-                type="password"
-                id="login12"
-                //className="fadeIn third"
-                name="user_password"
-                placeholder="password"
-                onChange={handleInputChange}
-                noValidate
-              />
+      <center>
+        <form action="" onSubmit={onSubmitForm}>
+          <div className="wrapper fadeInDown">
+            <div id="formContent">
+              <div class="login ">
+                <label>
+                  <b>Email id</b>
+                </label>
+                <br></br>
+                <input
+                  type="text"
+                  id="login12"
+                  //className="fadeIn second"
+                  name="user_email"
+                  placeholder="EmailId"
+                  noValidate
+                  onChange={handleInputChange}
+                />
+                <br></br>
+                <label>
+                  <b>Password</b>
+                </label>
+                <br></br>
+                <input
+                  type="password"
+                  id="login12"
+                  //className="fadeIn third"
+                  name="user_password"
+                  placeholder="password"
+                  onChange={handleInputChange}
+                  noValidate
+                />
+                <br></br>
+
+                <input type="checkbox" id="" />
+                <span>Remember me</span>
+                <br />
+                <br />
+
+                <input type="submit" className="fadeIn fourth" value="Log In" />
+                <br></br>
+
+                <a1 href="#">Forgot Password</a1>
+              </div>
               <br></br>
 
-              <input type="checkbox" id="" />
-              <span>Remember me</span>
-              <br />
-              <br />
-
-              <input type="submit" className="fadeIn fourth" value="Log In" />
-              <br></br>
-
-              <a1 href="#">Forgot Password</a1>
-            </div>
-            <br></br>
-
-            <div>
-              {/* <NavLink class="nav-link" to="/home">
+              <div>
+                {/* <NavLink class="nav-link" to="/home">
               <input type="submit" className="fadeIn fourth" value="Log In" />
           
               */}
 
-              {/* </NavLink> */}
-            </div>
+                {/* </NavLink> */}
+              </div>
 
-            {/* <NavLink class="nav-link" to="/register">
+              {/* <NavLink class="nav-link" to="/register">
                 <button className="btn btn-danger">Register</button>{" "}
               </NavLink> */}
+            </div>
           </div>
-        </div>
-        {/* <Route path="/register" component={Register}></Route>
+          {/* <Route path="/register" component={Register}></Route>
         <Route path="/home" component={Home}></Route> */}
-      </form>
-      <h1>{setDate}</h1>
+        </form>
+        <h1>{setDate}</h1>
+      </center>
     </div>
   );
 };

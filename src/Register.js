@@ -29,6 +29,7 @@ const Register = () => {
       const body = Text;
       console.log(body);
       const response = fetch("http://localhost:3001/api/v1/user/register", {
+        //                             ^----- API for Register
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
@@ -40,51 +41,57 @@ const Register = () => {
     }
   };
   return (
-    <div className="container">
-      <h3 className="form">
-        {" "}
-        <b>Register as new User</b>{" "}
-      </h3>
-      <form className="" action="" onSubmit={onSubmitForm} method="POST">
-        <div>
-          <label>UserName</label>
-        </div>
-        <input
-          type=""
-          placeholder="Enter UserName"
-          name="user_name"
-          onChange={handleInputChange}
-        />
-        <br></br>
-        <div>
-          <label for="Password">Password</label>
-          <br></br>
-
-          <input
-            type="Password"
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            //class="form-group col-sm-5 "
-            placeholder="Enter password"npm 
-            name="user_password"
-            onChange={handleInputChange}
-          />
-          <p>
-            # Password Must contain at least one number and one uppercase and
-            lowercase letter, and at least 8 or more characters required.
-          </p>
-        </div>
-        <br></br>
-        <div>
-          <label for="Age">Age</label>
-        </div>
-        <input
-          type="Age"
-          placeholder="Enter Age"
-          name="user_age"
-          onChange={handleInputChange}
-        />{" "}
-        <br></br>
-        {/* 
+    <div>
+      <center>
+        <div className="container">
+          <h3 className="form">
+            {" "}
+            <b>Register as new User</b>{" "}
+          </h3>
+          <form className="" action="" onSubmit={onSubmitForm} method="POST">
+            <div>
+              <label>UserName</label>
+            </div>
+            <input
+              required
+              type=""
+              placeholder="Enter UserName"
+              name="user_name"
+              onChange={handleInputChange}
+            />
+            <br></br>
+            <div>
+              <label for="Password">Password</label>
+              <br></br>
+              <input
+                required
+                type="Password"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                //class="form-group col-sm-5 "
+                placeholder="Enter password"
+                npm
+                name="user_password"
+                onChange={handleInputChange}
+              />
+              <p>
+                # Password Must contain at least one number and one uppercase
+                and lowercase letter, and at least 8 or more characters
+                required.
+              </p>
+            </div>
+            <br></br>
+            <div>
+              <label for="Age">Age</label>
+            </div>
+            <input
+              required
+              type="Age"
+              placeholder="Enter Age"
+              name="user_age"
+              onChange={handleInputChange}
+            />{" "}
+            <br></br>
+            {/* 
         <div>
           <label for="Gender">Gender</label>
           <br></br>
@@ -98,105 +105,112 @@ const Register = () => {
           />
         </div>
         */}
-        <br></br>
-        <div>
-          <label for="Email">Email</label>
-        </div>
-        <input
-          type="Email"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2gi,}$"
-          //class="form-group col-sm-5 "
-          placeholder="Enter Email"
-          name="user_email"
-          onChange={handleInputChange}
-        />
-        <br></br>
-        <br></br>
-        <div>
-          <label for="Gender">Gender</label>
+            <br></br>
+            <div>
+              <label for="Email">Email</label>
+            </div>
+            <input
+              required
+              type="Email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              //class="form-group col-sm-5 "
+              placeholder="Enter Email"
+              name="user_email"
+              onChange={handleInputChange}
+            />
+            <br></br>
+            <br></br>
+            <div>
+              <label for="Gender">Gender</label>
+              <br></br>
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+                name="user_gender"
+                onChange={handleInputChange}
+              />{" "}
+              <label for="male">Male</label> <br></br>
+              <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="female"
+                name="user_gender"
+                onChange={handleInputChange}
+              />
+              <label for="female">Female</label> <br></br>
+              <input
+                type="radio"
+                id="other"
+                name="gender"
+                value="other"
+                name="user_gender"
+                onChange={handleInputChange}
+              />
+              <label for="other">Other / Not to Say</label>
+            </div>
+            <br></br>
+            <div>
+              <label for="dod">DateOfBirth</label>
+            </div>
+            <input
+              required
+              type="date"
+              //class="form-group col-sm-5 "
+              placeholder="Enter DOB"
+              name="user_dob"
+              onChange={handleInputChange}
+            />
+            <br></br>
+            <div>
+              <label for="City">City</label>
+            </div>
+            <input
+              required
+              type="city"
+              // class="form-group col-sm-5 "
+              placeholder="Enter City"
+              name="user_city"
+              onChange={handleInputChange}
+            />
+            <br></br>
+            <div>
+              <label for="Mobileno">MobileNo</label>
+            </div>
+            <input
+              required
+              type="tel"
+              // class="form-group col-sm-5 "
+              placeholder="Enter MobileNo"
+              pattern="[0-9]{10}"
+              name="user_mobileno"
+              onChange={handleInputChange}
+            />
+            <br></br>
+            <div>
+              <br></br>
+
+              <button type="submit" class="btn btn-primary">
+                Submit
+              </button>
+              <br></br>
+            </div>
+          </form>
           <br></br>
-          <input
-            type="radio"
-            id="male"
-            name="gender"
-            value="male"
-            name="user_gender"
-            onChange={handleInputChange}
-          />
-          <label for="male">Male</label>
-          <input
-            type="radio"
-            id="female"
-            name="gender"
-            value="female"
-            name="user_gender"
-            onChange={handleInputChange}
-          />
+          <div class="signinclass">
+            <NavLink class="signinclass" to="/login">
+              <button className="btn btn-danger">
+                <b>Sign in</b>
+              </button>
+              <h3>For Existing User</h3>
+            </NavLink>
+          </div>
 
-          <label for="female">Female</label>
-          <input
-            type="radio"
-            id="other"
-            name="gender"
-            value="other"
-            name="user_gender"
-            onChange={handleInputChange}
-          />
-
-          <label for="other">Other</label>
+          <Route path="/login" component={Login}></Route>
         </div>
-        <br></br>
-        <div>
-          <label for="dod">DateOfBirth</label>
-        </div>
-        <input
-          type="date"
-          //class="form-group col-sm-5 "
-          placeholder="Enter DOB"
-          name="user_dob"
-          onChange={handleInputChange}
-        />
-        <br></br>
-        <div>
-          <label for="City">City</label>
-        </div>
-        <input
-          type="city"
-          // class="form-group col-sm-5 "
-          placeholder="Enter City"
-          name="user_city"
-          onChange={handleInputChange}
-        />
-        <br></br>
-        <div>
-          <label for="Mobileno">MobileNo</label>
-        </div>
-        <input
-          type="tel"
-          // class="form-group col-sm-5 "
-          placeholder="Enter MobileNo"
-          pattern="[0-9]{10}"
-          name="user_mobileno"
-          onChange={handleInputChange}
-        />
-        <br></br>
-        <div>
-          <br></br>
-
-          <button type="submit" class="btn btn-primary">
-            Submit
-          </button>
-          <br></br>
-        </div>
-      </form>
-      <div>
-        <NavLink class="" to="/login">
-          <button className="btn btn-danger">Sign in</button>
-          <h3>For Existing User</h3>
-        </NavLink>
-      </div>
-
-      <Route path="/login" component={Login}></Route>
+      </center>
     </div>
   );
 };

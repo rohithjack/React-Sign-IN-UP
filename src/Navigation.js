@@ -6,6 +6,7 @@ import { NavLink, Route } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import "./CSS/navigation.css";
+import home from "./Home";
 
 class Navigation extends React.Component {
   render() {
@@ -35,7 +36,11 @@ class Navigation extends React.Component {
             </li>
            
             */}
-
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/Home">
+                <b>Home </b>
+              </NavLink>
+            </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/Login">
                 <b>Login</b>
@@ -79,6 +84,7 @@ class Navigation extends React.Component {
         <Route path="/DeveloperPage" component={DeveloperPage}></Route>     */}
         <Route path="/Login" component={Login}></Route>
         <Route path="/Register" component={Register}></Route>
+        {/* <Route path="/Home" component={Home}></Route> */}
       </div>
     );
   }
